@@ -8,12 +8,17 @@ alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawa
 
 let orderName = prompt('Enter the name of the pizza you want to order today');
 
+function checkOrderName(orderName) {
+    if (orderName.toLowerCase() == vegetarian.toLowerCase() || orderName.toLowerCase() == hawaiian.toLowerCase() || orderName.toLowerCase() == pepperoni.toLowerCase()){
+        return true;
+    } else {
+        return false;
+    }
+}
+
 let orderQuantity = prompt(`How many of ${orderName} do you want?`);
 
-let orderTotal = orderQuantity * pizzaPrice;
-alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr`);
-
-function cookingTime(orderQuantity) {
+function cookingTime(orderQuantity){
     if (orderQuantity <= 2 && orderQuantity >= 1) {
         return "The pizzas will take 10 minutes.";
     } else if (orderQuantity <= 5 && orderQuantity >= 3) {
@@ -21,4 +26,9 @@ function cookingTime(orderQuantity) {
     } else {
         return "The pizzas will take 20 minutes.";
     }
+}
+
+function totalCost(orderQuantity) {
+    let orderTotal = orderQuantity * pizzaPrice;
+    alert(`Great, I'll get started on your ${orderName} right away, it will cost ${orderTotal} kr`);
 }
