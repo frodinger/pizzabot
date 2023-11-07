@@ -4,7 +4,7 @@ const pepperoni = "Pepperoni Pizza";
 
 const pizzaPrice = 80;
 
-// functions
+// funktioner
 function checkOrderName(pizzaName) {
     return pizzaName.toLowerCase() == vegetarian.toLowerCase() || pizzaName.toLowerCase() == hawaii.toLowerCase() 
     || pizzaName.toLowerCase() == pepperoni.toLowerCase() || pizzaName.toLowerCase() == "vegetarian".toLowerCase() 
@@ -33,21 +33,17 @@ function totalCost(orderQuant) {
 alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaii} and ${pepperoni}`);
 
 let correctOrder = false;
+let orderName = "";
+let orderQuantity = "";
 
 while (!correctOrder) {
-    let orderName = prompt('Enter the name of the pizza you want to order today');
+    orderName = prompt('Enter the name of the pizza you want to order today');
 
     correctOrder = checkOrderName(orderName);
     if (!correctOrder) {
         alert("That pizza isn't on the menu");
     }
 }
-
-let orderQuantity = prompt(`How many of the ${orderName} do you want?`);
-
-totalCost(orderQuantity);
-
-/*
 
 function checkIfValidQuantity(quant) {
     return quant >= 1;
@@ -56,15 +52,13 @@ function checkIfValidQuantity(quant) {
 let validQuantity = false;
 
 while (!validQuantity) {
-    let orderQuantity = prompt(`How many of the ${orderName} do you want?`);
+    orderQuantity = prompt(`How many of the ${orderName} do you want?`);
     
     validQuantity = checkIfValidQuantity(orderQuantity);
     if (!validQuantity) {
         alert("You can't order less than one pizza");
     }
+    else {
+        totalCost(orderQuantity);
+    }
 }
-
-
-
-totalCost(orderQuantity);
-*/
