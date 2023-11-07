@@ -58,7 +58,7 @@ while (!validQuantity) {
     if (!validQuantity) {
         alert("You can't order less than one pizza");
     }
-    else {
-        totalCost(orderQuantity);
-    }
 }
+
+totalCost(orderQuantity);
+
