@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzabot form</title>
+</head>
+<body>
+    <h1>Pizzabot</h1>
+    <p>Hey! Happy to serve your pizza. On our menu we have vegetarian pizza, hawaiian pizza and pepperoni pizza.</p>
+
+    <form id="pizzaOrder" action="/action_page.php">
+        <p>Please select which pizza to order:</p>
+        <!--
+        <input type="radio" id="vegetarian" name="pizza" value="vegetarian">
+        <label for="vegetarian">Vegetarian pizza</label><br>
+        <input type="radio" id="hawaiian" name="pizza" value="hawaiian">
+        <label for="hawaiian">Hawaiian pizza</label><br>
+        <input type="radio" id="pepperoni" name="pizza" value="pepperoni">
+        <label for="pepperoni">Pepperoni pizza</label> 
+        -->
+
+        <input list="pizzas" name="pizzas">
+        <datalist id="pizzas">
+            <option value="Vegetarian pizza">
+            <option value="Hawaiian pizza">
+            <option value="Pepperoni pizza">
+        </datalist>
+
+        <br>
+        <p>Write how many pizzas you want to order</p>
+        <label for="numberPizza">Number of pizzas:</label>
+        <input type="text" name="numberPizza">
+        <br><br>
+        <input type="button" onclick="myFunction()" value="Order">
+
+    </form>
+
+    <script src="pizzabotForm.js" charset="utf-8"></script>
+</body>
+</html>
