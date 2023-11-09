@@ -7,34 +7,20 @@
 </head>
 <body>
     <h1>Pizzabot</h1>
-    <p>Hey! Happy to serve your pizza. On our menu we have vegetarian pizza, hawaiian pizza and pepperoni pizza.</p>
+    <p>Hey! Happy to serve your pizza. On our menu we have vegetarian pizza, hawaii pizza and pepperoni pizza.</p>
+    <label for="selectPizza">Pizza type:</label>
+    <select name="selectPizza" id="pizzaType">
+        <option value="vegetarian pizza">Vegetarian pizza</option>
+        <option value="hawaii pizza">Hawaii pizza</option>
+        <option value="pepperoni pizza">Pepperoni pizza</option>
+    </select>
 
-    <form id="pizzaOrder" action="/action_page.php">
-        <p>Please select which pizza to order:</p>
-        <!--
-        <input type="radio" id="vegetarian" name="pizza" value="vegetarian">
-        <label for="vegetarian">Vegetarian pizza</label><br>
-        <input type="radio" id="hawaiian" name="pizza" value="hawaiian">
-        <label for="hawaiian">Hawaiian pizza</label><br>
-        <input type="radio" id="pepperoni" name="pizza" value="pepperoni">
-        <label for="pepperoni">Pepperoni pizza</label> 
-        -->
-
-        <input list="pizzas" name="pizzas">
-        <datalist id="pizzas">
-            <option id="vegetarian" value="Vegetarian pizza">
-            <option id="hawaii" value="Hawaii pizza">
-            <option id="pepperoni" value="Pepperoni pizza">
-        </datalist>
-
-        <br>
-        <p>Write how many pizzas you want to order</p>
-        <label for="numberPizza">Number of pizzas:</label>
-        <input type="text" name="numberPizza">
-        <br><br>
-        <input type="button" onclick="myFunction()" value="Order">
-
-    </form>
+    <br>
+    <label for="numberPizza">Quantity of pizza:</label>
+    <input id="pizzaQuantity" type="text" name="numberPizza">
+    <br><br>
+    <button id="orderBtn">Order</button>
+    <div id="orderText"></div>
 
     <script src="pizzabotForm.js" charset="utf-8"></script>
 </body>
