@@ -9,7 +9,7 @@ orderBtn.addEventListener("click",(e) => {
     const orderName = pizzaType.value;
     const orderQuantity = pizzaQuantity.value;
     const orderTotal = orderQuantity * pizzaPrice;
-    let cookingTime;
+    let cookingTime = "";
   
     if (orderQuantity <= 2) {
       cookingTime = 10;
@@ -18,5 +18,5 @@ orderBtn.addEventListener("click",(e) => {
     } else if (orderQuantity >= 6) {
       cookingTime = 20;
     }
-    orderTextEl.textContent = `Great, I'll get started on your ${orderName} right away. The pizzas will take ${cookingTime} minutes. It will cost ${orderTotal} kr`;
+    orderTextEl.textContent = `Great, I'll get started on your ${orderName} right away. The pizzas will take ${cookingTime} minutes. It will cost ${orderTotal} kr.`;
 });
